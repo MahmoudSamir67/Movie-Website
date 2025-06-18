@@ -1,0 +1,289 @@
+/* components.css */
+
+.movie-card {
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.poster-wrapper {
+  position: relative;
+  border-radius: 12px;
+  /* overflow: hidden; */
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.more-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(178, 178, 178, 0.242);
+  border: none;
+  border-radius: 100%;
+  padding: 1px 6px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.rating-wrapper {
+  position: absolute;
+  bottom: -18px;
+  left: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--circle-color) var(--circle-percent),
+    #1e293b 0
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-badge {
+  background: #0f172a;
+  color: var(--circle-color);
+  font-weight: bold;
+  font-size: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-info {
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-info .title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-info .date {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.wish-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* components.css */
+
+/* Pagination container */
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Page item */
+.custom-pagination li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #000;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+/* Active page item */
+.custom-pagination li.active {
+  background-color: #ffe353;
+  font-weight: bold;
+}
+
+/* Dots */
+.custom-pagination li.dots {
+  cursor: default;
+}
+
+/* Arrows */
+.custom-pagination li.arrow {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 6px 10px;
+}
+/* components.css */
+
+/* Navbar background */
+.wish{
+  position: relative;
+}
+.whishNum{
+  position: absolute;
+  color: #000;
+  top: 10px;
+  right: -30px;
+  background-color: #fff;
+  padding-inline: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  border-radius: 5px;
+}
+.whishNum h5{
+    font-weight: 400;
+    font-size: 18px;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.dropdown-toggle{
+  border: none !important;
+}
+.dropdown-menu{
+  background-color: #ffe353 !important;
+  /* border: none !important; */
+}
+@media (max-width:992px){
+  .dropdown-menu{
+  border: none !important;
+}
+}
+.dropdown-menu .active{
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.custom-navbar {
+  background-color: #ffe353 !important;
+  color: #000;
+}
+.wish .texted{
+  color: black;
+  transition: color 0.3s ease;
+}
+.wish .heart {
+  color: black;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.wish:hover .texted{
+  color: white ;
+}
+.wish:hover .heart {
+  color: white !important;
+  transform: scaleX(-1); 
+}
+
+/* Search button */
+.backG{
+  background-color: #f3f1f1;
+}
+.searchInput::placeholder{
+  color: rgb(123, 123, 123);
+  font-size: 16px;
+}
+.searchInput::-webkit-input-placeholder {
+  color: rgb(123, 123, 123);
+  font-size: 16px;
+}
+.searchInput::-moz-placeholder {
+  color: rgb(123, 123, 123);
+  font-size: 16px;
+}
+.searchInput:-ms-input-placeholder {
+  color: rgb(123, 123, 123);
+  font-size: 16px;
+}
+.searchInput:-moz-placeholder {
+  color: rgb(123, 123, 123);
+  font-size: 16px;
+}
+.custom-search-btn {
+  background-color: #ffe353;
+  color: #000;
+  border: none;
+}
+
+.custom-search-btn:hover {
+  background-color: #e0a800;
+  color: #000;
+}
+/* home card css*/
+.tooltip {
+      visibility: hidden;
+      background-color: #ffe353;
+      color: #000;
+      font-weight: 500;
+      text-align: center;
+      border-radius: 4px;
+      padding: 5px 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      white-space: nowrap;
+    }
+
+    .newest:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+    @media (max-width:576px){
+      .headerrs{
+        font-size: 22px;
+      }
+      .parag{
+        font-size: 14px;
+      }
+      .searchDiv{
+        flex-direction: column;
+      }
+      .searchInput{
+        margin-bottom: 20px;
+      }
+      .searchInput::placeholder{
+        font-size: 14px;
+        text-align: center;
+      }
+      .searchInput::-webkit-input-placeholder {
+        font-size: 14px;
+        text-align: center;
+      }
+      .searchInput::-moz-placeholder {
+        font-size: 14px;
+        text-align: center;
+      }
+      .searchInput:-ms-input-placeholder {
+        font-size: 14px;
+        text-align: center;
+      }
+      .searchInput:-moz-placeholder {
+        font-size: 14px;
+        text-align: center;
+      }
+      .searchBut{
+        font-size: medium;
+      }
+    }

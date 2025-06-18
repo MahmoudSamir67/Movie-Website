@@ -1,0 +1,56 @@
+
+.moviee h2{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.moviee .date{
+    font-size: .9rem;
+    color: gray;
+}
+.moviee .overview{
+    font-size: 1.5rem;
+}
+.moviee .star{
+    color: black;
+    font-size: 1.3rem;
+    margin-right: .5rem;
+}
+.moviee .fullStar{
+    color: black;
+}
+.moviee .emptyStar{
+    color: #ccc;
+}
+
+.heart-icon {
+  font-size: 70px;
+  color: #ddd;
+  transition: all 0.3s;
+}
+.heart-icon.active {
+  color: #ffe353;
+}
+
+.moviee .movie-badge{
+    padding: 8px 32px;
+    background-color: #FFE353;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+}
+.moviee .duration{
+   font-weight: 700;
+}
+.moviee .redirect-btn{
+    padding: 8px 32px;
+    border:1px solid #FFE353;
+    background-color: transparent;
+    text-decoration: none;
+    color: rgb(61, 59, 59);
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all .3 ease-in-out;
+}
+.redirect-btn:hover {
+  background-color: #FFE353;
+}
