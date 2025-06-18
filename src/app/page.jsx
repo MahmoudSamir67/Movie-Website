@@ -14,8 +14,8 @@ export default async function Home({ searchParams }) {
 
   const data = await fetchMovies(page, query);
   const movies = data.results.filter((m) => m.poster_path);
-  const currentPage = data.total_pages;
-  const totalPages = page;
+  const currentPage = page;
+  const totalPages = data.total_pages;
 
   return (
     <>
