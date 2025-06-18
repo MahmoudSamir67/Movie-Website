@@ -1,4 +1,4 @@
-const API_KEY = process.env.tmdb_api_key;
+const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
 
 export async function fetchMovies(page = 1, query = "") {
