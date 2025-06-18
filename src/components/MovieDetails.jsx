@@ -35,13 +35,14 @@ function MovieDetails({ movie, recommendations }) {
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
-            className="img-fluid rounded rounded-5"
+            className="img-fluid rounded rounded-5 "
           />
         </div>
-        <div className="col-12 col-md-6 col-lg-8 d-flex flex-column justify-content-between  pt-4 pb-3 ps-4">
-          <div className=" d-flex justify-content-between align-items-start">
+
+        <div className="details col-12 col-md-6 col-lg-8 d-flex flex-column justify-content-between  pt-4 pb-3 ps-md-4 ps-0">
+          <div className=" d-flex justify-content-between align-items-center">
             <div>
-              <h2>{movie.title}</h2>
+              <h2 className="movie-title">{movie.title}</h2>
               <p className="date">
                 {new Date(movie.release_date).toLocaleDateString("en-US", {
                   month: "short",
@@ -49,7 +50,7 @@ function MovieDetails({ movie, recommendations }) {
                   year: "numeric",
                 })}
               </p>
-              <p>
+              <p className="rate">
                 {[...Array(4)].map((e, i) => (
                   <FontAwesomeIcon
                     key={i}
@@ -74,22 +75,23 @@ function MovieDetails({ movie, recommendations }) {
             </div>
           </div>
           <p className="overview">{movie.overview}</p>
-          <div className="d-flex gap-3">
+          <div className="d-flex flex-wrap  gap-0 gap-md-3">
             <span className="movie-badge ">Action</span>
             <span className="movie-badge ">Crime</span>
-            <span className="movie-badge">Thriller</span>
+            <span className="movie-badge ">Thriller</span>
           </div>
-          <div className=" d-flex gap-5 ">
+          <div className=" d-flex  gap-4">
             <p>
-              <span className="duration me-3">Duration:</span>{" "}
-              {movie.vote_count} Min.
+              <span className="duration ">Duration:</span> {movie.vote_count}{" "}
+              Min.
             </p>
             <p>
-              <span className="duration me-3">Languages:</span> English
+              <span className="duration ">Languages:</span> English
             </p>
           </div>
           <Image
             src="/assets/marvel.png"
+            className="marvel-img"
             alt="Marvel Logo"
             width={200}
             height={50}
@@ -107,7 +109,7 @@ function MovieDetails({ movie, recommendations }) {
       <hr />
 
       {/* Recommendations */}
-      <h2 className="mb-4 ms-3 py-3">Recommendations</h2>
+      <h2 className="recommend mb-4 py-3">Recommendations</h2>
       <div className="row">
         {recommendations
           .filter((movie) => movie.poster_path)
