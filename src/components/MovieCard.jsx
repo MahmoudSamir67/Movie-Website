@@ -31,13 +31,14 @@ export default function MovieCard({ movie, onWishToggle }) {
   else color = "#ff4444";
 
   return (
-    <div
-      role="button"
-      className="border-0 bg-transparent"
-      onClick={() => router.push(`/movies/${movie.id}`)}
-    >
+    <div className="border-0 bg-transparent">
       <div className="movie-card">
-        <div className="poster-wrapper" style={{ position: "relative" }}>
+        <div
+          className="poster-wrapper"
+          style={{ position: "relative" }}
+          onClick={() => router.push(`/movies/${movie.id}`)}
+          role="button"
+        >
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
