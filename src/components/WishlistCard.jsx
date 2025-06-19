@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { getWishlist, saveWishlist } from "@/utils/localWishlist";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar as fullStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as emptyStar } from "@fortawesome/free-regular-svg-icons";
 
 export default function WishlistCard({ movie }) {
   const router = useRouter();
@@ -24,7 +27,7 @@ export default function WishlistCard({ movie }) {
 
   return (
     <div
-      className="d-flex rounded-4 shadow-sm p-3 mb-3"
+      className="d-flex rounded-4 shadow-lg p-3 mb-3"
       style={{
         backgroundColor: "#fff",
         color: "#000",
@@ -66,15 +69,24 @@ export default function WishlistCard({ movie }) {
             </span>
           </button>
         </div>
-
-        <div className="d-flex align-items-center mt-2">
-          <span className="me-1">⭐</span>
-          <span className="me-2">{movie.vote_average.toFixed(1)}</span>
-          <small className="text-muted">({movie.vote_count})</small>
-        </div>
-
+        <p className="mb-0 d-flex align-items-center mt-2">
+          {[...Array(4)].map((_, i) => (
+            <FontAwesomeIcon
+              key={i}
+              icon={fullStar}
+              className="me-1"
+              style={{ color: "#292D32", fontSize: "16px" }}
+            />
+          ))}
+          <FontAwesomeIcon
+            icon={emptyStar}
+            className="me-2"
+            style={{ color: "#ccc", fontSize: "16px" }}
+          />
+          <span>{movie.vote_average.toFixed(1)}</span>
+        </p>
         <p
-          className="mt-2 mb-0 text-light-emphasis"
+          className="mt-2 mb-0 fw-semibold text-light-emphasis"
           style={{ fontSize: "14px" }}
         >
           {movie.overview.length > 120
